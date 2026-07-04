@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Plan – PROFILIX</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#02142f;
+  --gold:#f5a623;
+  --gold2:#ffd166;
+  --blue:#0077ff;
+  --sky:#00b7ff;
+  --dark:#011126;
+  --card:#0a1f42;
+}
+body{background:var(--navy);color:white;font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+
+nav{
+  background:var(--dark);padding:18px 7%;
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid rgba(245,166,35,0.2);
+  position:sticky;top:0;z-index:100;
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--sky);text-decoration:none;letter-spacing:2px;}
+.nav-back{display:flex;align-items:center;gap:8px;color:#aaa;font-size:15px;text-decoration:none;transition:.3s;}
+.nav-back:hover{color:var(--gold);}
+
+.hero{
+  padding:100px 7% 70px;text-align:center;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(245,166,35,0.1),transparent 70%);
+  pointer-events:none;
+}
+.plan-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--dark);
+  padding:8px 22px;border-radius:30px;
+  font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:22px;box-shadow:0 4px 20px rgba(245,166,35,0.3);
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,7vw,88px);font-weight:900;
+  color:var(--gold);line-height:1.05;margin-bottom:16px;
+  animation:fadeUp .7s ease both;
+}
+.hero h2{
+  font-size:clamp(16px,2.5vw,22px);color:#c4a97a;
+  font-weight:400;margin-bottom:50px;
+  animation:fadeUp .7s .1s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+.shape{position:absolute;border:2px solid rgba(245,166,35,0.08);border-radius:4px;animation:spin 18s linear infinite;}
+.shape:nth-child(1){width:80px;height:80px;top:15%;left:5%;transform:rotate(20deg);}
+.shape:nth-child(2){width:50px;height:50px;top:30%;right:8%;transform:rotate(45deg);animation-duration:12s;}
+.shape:nth-child(3){width:120px;height:120px;bottom:10%;left:10%;transform:rotate(10deg);animation-duration:22s;}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+.features-section{padding:0 7% 80px;}
+.section-label{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+
+.features-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:18px;margin-top:40px;
+}
+.feature-card{
+  background:var(--card);
+  border:1px solid rgba(245,166,35,0.12);
+  border-radius:14px;padding:28px 24px;
+  display:flex;align-items:flex-start;gap:16px;transition:.4s ease;
+  animation:fadeUp .6s ease both;
+}
+.feature-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 30px rgba(245,166,35,0.1);}
+.feature-card:nth-child(2){animation-delay:.05s}
+.feature-card:nth-child(3){animation-delay:.1s}
+.feature-card:nth-child(4){animation-delay:.15s}
+.feature-card:nth-child(5){animation-delay:.2s}
+.feature-card:nth-child(6){animation-delay:.25s}
+.feature-card:nth-child(7){animation-delay:.3s}
+.feature-card:nth-child(8){animation-delay:.35s}
+.feature-card:nth-child(9){animation-delay:.4s}
+.feature-card:nth-child(10){animation-delay:.45s}
+.feature-card:nth-child(11){animation-delay:.5s}
+.feature-card:nth-child(12){animation-delay:.55s}
+.feature-card:nth-child(13){animation-delay:.6s}
+.feature-card:nth-child(14){animation-delay:.65s}
+.feat-icon{
+  width:44px;height:44px;min-width:44px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:var(--dark);
+}
+.feat-text h3{font-size:16px;font-weight:600;margin-bottom:4px;color:white;}
+.feat-text p{font-size:14px;color:#9a8060;line-height:1.5;}
+
+/* INCLUDES AI PLAN BANNER */
+.includes-banner{
+  margin:0 7% 60px;
+  background:linear-gradient(135deg,rgba(0,119,255,0.15),rgba(0,183,255,0.08));
+  border:1px solid rgba(0,183,255,0.2);
+  border-radius:14px;padding:28px 32px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.includes-banner i{font-size:32px;color:var(--sky);}
+.includes-banner h3{font-size:18px;color:var(--sky);margin-bottom:4px;}
+.includes-banner p{font-size:14px;color:#7fa8c8;}
+.includes-banner a{margin-left:auto;color:var(--sky);font-size:14px;text-decoration:none;border:1px solid var(--sky);padding:8px 18px;border-radius:8px;transition:.3s;white-space:nowrap;}
+.includes-banner a:hover{background:rgba(0,183,255,0.1);}
+
+.cta-section{
+  padding:80px 7%;text-align:center;
+  background:linear-gradient(135deg,rgba(245,166,35,0.07),rgba(255,209,102,0.04));
+  border-top:1px solid rgba(245,166,35,0.12);
+  border-bottom:1px solid rgba(245,166,35,0.12);
+}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);margin-bottom:14px;color:white;}
+.cta-section p{color:#9a8060;font-size:17px;margin-bottom:36px;}
+.btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{
+  padding:16px 36px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--dark);font-weight:700;font-size:15px;
+  border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;
+  transition:.4s;box-shadow:0 8px 24px rgba(245,166,35,0.25);
+}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(245,166,35,0.35);}
+.btn-outline{
+  padding:16px 36px;background:transparent;color:var(--gold);font-weight:600;font-size:15px;
+  border:2px solid var(--gold);border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;transition:.4s;
+}
+.btn-outline:hover{background:rgba(245,166,35,0.08);}
+
+.plans-nav{padding:70px 7%;text-align:center;}
+.plans-nav h3{font-family:'Playfair Display',serif;font-size:30px;color:white;margin-bottom:36px;}
+.plans-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+.plan-card{
+  background:var(--card);border:1px solid rgba(0,183,255,0.15);
+  border-radius:14px;padding:30px 28px;width:220px;text-align:left;
+  text-decoration:none;color:white;transition:.4s;
+}
+.plan-card:hover{border-color:var(--sky);transform:translateY(-6px);}
+.plan-card .icon{font-size:28px;margin-bottom:12px;}
+.plan-card h4{font-size:18px;font-weight:700;color:var(--sky);margin-bottom:6px;}
+.plan-card p{font-size:13px;color:#7fa8c8;}
+
+.footer-mini{
+  background:var(--dark);padding:24px 7%;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:12px;
+}
+.footer-mini p{color:#888;font-size:14px;}
+.footer-mini a{color:var(--sky);font-size:14px;text-decoration:none;}
+
+@media(max-width:768px){
+  .hero{padding:70px 5% 50px;}
+  .features-section,.cta-section,.plans-nav{padding-left:5%;padding-right:5%;}
+  .includes-banner{margin-left:5%;margin-right:5%;}
+  .includes-banner a{margin-left:0;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PROFILIX</a>
+  <a href="index.html" class="nav-back"><i class="fa fa-arrow-left"></i> Back to Home</a>
+</nav>
+
+<section class="hero">
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="plan-badge">🥇 Gold Plan</div>
+  <h1>Professional<br>Business Identity</h1>
+  <h2>Businesses aur professionals ke liye advanced package.</h2>
+</section>
+
+<!-- INCLUDES AI PLAN -->
+<div class="includes-banner">
+  <i class="fa fa-circle-check"></i>
+  <div>
+    <h3>Includes Everything in AI Plan</h3>
+    <p>All AI Plan features are part of Gold Plan — plus much more below.</p>
+  </div>
+  <a href="ai-plan.html">View AI Plan →</a>
+</div>
+
+<section class="features-section">
+  <p class="section-label">Premium Features</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:white;">Everything in Gold Plan</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-circle-nodes"></i></div>
+      <div class="feat-text"><h3>Everything in AI Plan</h3><p>Get all baseline tools and automated smart features included by default.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-palette"></i></div>
+      <div class="feat-text"><h3>Premium Profile Design</h3><p>Beautifully crafted professional profile layout.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-credit-card"></i></div>
+      <div class="feat-text"><h3>Physical Smart Card</h3><p>Real premium PVC card delivered to your door.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-briefcase"></i></div>
+      <div class="feat-text"><h3>Advanced Portfolio Showcase</h3><p>Full portfolio with categories and media support.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-building"></i></div>
+      <div class="feat-text"><h3>Business Information Section</h3><p>Dedicated section for your business details.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-list-check"></i></div>
+      <div class="feat-text"><h3>Services Listing</h3><p>Showcase all your services in an organized way.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fab fa-whatsapp"></i></div>
+      <div class="feat-text"><h3>WhatsApp Direct Button</h3><p>One-tap WhatsApp contact button on your profile.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-swatchbook"></i></div>
+      <div class="feat-text"><h3>Custom Theme Colors</h3><p>Personalize your profile with brand colors.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-chart-bar"></i></div>
+      <div class="feat-text"><h3>Advanced Visitor Analytics</h3><p>Track visits, clicks, and engagement in detail.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-link"></i></div>
+      <div class="feat-text"><h3>Multiple Social Links</h3><p>Connect all your social media platforms.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-headset"></i></div>
+      <div class="feat-text"><h3>Priority Support</h3><p>Get faster, dedicated support responses.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-star"></i></div>
+      <div class="feat-text"><h3>Smart Branding Features</h3><p>Professional branding tools for your identity.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-magnifying-glass"></i></div>
+      <div class="feat-text"><h3>Profile SEO Optimization</h3><p>Your profile ranks better on search engines.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-qrcode"></i></div>
+      <div class="feat-text"><h3>Business QR Stand Design</h3><p>Custom QR stand for your shop or office.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA WITH UPDATED EMAIL & LINKEDIN LINKS -->
+<section class="cta-section">
+  <h2>Upgrade to Gold — Stand Out!</h2>
+  <p>Take your professional identity to the next level with Gold Plan.</p>
+  <div class="btn-row">
+    <!-- Email Contact Button -->
+    <a href="mailto:profilix.services@gmail.com" class="btn-primary"><i class="fa fa-envelope" style="margin-right: 8px;"></i> Email Us Now</a>
+    <!-- LinkedIn Contact Button -->
+    <a href="https://linkedin.com/company/profilix" target="_blank" class="btn-outline"><i class="fab fa-linkedin" style="margin-right: 8px;"></i> Connect on LinkedIn</a>
+  </div>
+</section>
+
+<section class="plans-nav">
+  <h3>Explore Other Plans</h3>
+  <div class="plans-row">
+    <a href="ai-plan.html" class="plan-card">
+      <div class="icon">🤖</div>
+      <h4>AI Plan</h4>
+      <p>Smart Starter for Beginners</p>
+    </a>
+    <a href="platinum-plan.html" class="plan-card">
+      <div class="icon">💎</div>
+      <h4>Platinum Plan</h4>
+      <p>Ultimate Smart Identity Solution</p>
+    </a>
+    <a href="smart-qr.html" class="plan-card">
+      <div class="icon">📇</div>
+      <h4>Smart QR Cards</h4>
+      <p>Physical NFC Smart Cards</p>
+    </a>
+  </div>
+</section>
+
+<div class="footer-mini">
+  <p>© 2026 PROFILIX DIGITAL SERVICES. All Rights Reserved.</p>
+  <a href="index.html">← Back to Main Site</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platinum Plan – PROFILIX</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#02142f;
+  --plat:#e2e8f0;
+  --plat2:#94a3b8;
+  --accent:#7c3aed;
+  --accent2:#a78bfa;
+  --blue:#0077ff;
+  --sky:#00b7ff;
+  --dark:#011126;
+  --card:#0a1f42;
+}
+body{background:var(--navy);color:white;font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+
+nav{
+  background:var(--dark);padding:18px 7%;
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid rgba(167,139,250,0.2);
+  position:sticky;top:0;z-index:100;
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--sky);text-decoration:none;letter-spacing:2px;}
+.nav-back{display:flex;align-items:center;gap:8px;color:#aaa;font-size:15px;text-decoration:none;transition:.3s;}
+.nav-back:hover{color:var(--accent2);}
+
+.hero{
+  padding:100px 7% 70px;text-align:center;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(124,58,237,0.13),transparent 70%);
+  pointer-events:none;
+}
+.plan-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:white;padding:8px 22px;border-radius:30px;
+  font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:22px;box-shadow:0 4px 20px rgba(124,58,237,0.35);
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,7vw,88px);font-weight:900;
+  background:linear-gradient(135deg,var(--plat),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1.05;margin-bottom:16px;
+  animation:fadeUp .7s ease both;
+}
+.hero h2{
+  font-size:clamp(16px,2.5vw,22px);color:#a0c4e8;
+  font-weight:400;margin-bottom:50px;
+  animation:fadeUp .7s .1s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+/* Crown badge */
+.crown-wrap{
+  display:flex;justify-content:center;margin-bottom:20px;
+  animation:fadeUp .5s ease both;
+}
+.crown-wrap span{
+  font-size:52px;
+  filter:drop-shadow(0 0 16px rgba(167,139,250,0.5));
+}
+
+.shape{position:absolute;border:2px solid rgba(124,58,237,0.08);border-radius:4px;animation:spin 18s linear infinite;}
+.shape:nth-child(1){width:80px;height:80px;top:15%;left:5%;transform:rotate(20deg);}
+.shape:nth-child(2){width:50px;height:50px;top:30%;right:8%;transform:rotate(45deg);animation-duration:12s;}
+.shape:nth-child(3){width:120px;height:120px;bottom:10%;left:10%;transform:rotate(10deg);animation-duration:22s;}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+.features-section{padding:0 7% 80px;}
+.section-label{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent2);margin-bottom:14px;}
+
+.features-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:18px;margin-top:40px;
+}
+.feature-card{
+  background:var(--card);
+  border:1px solid rgba(124,58,237,0.15);
+  border-radius:14px;padding:28px 24px;
+  display:flex;align-items:flex-start;gap:16px;transition:.4s ease;
+  animation:fadeUp .6s ease both;
+}
+.feature-card:hover{border-color:var(--accent2);transform:translateY(-4px);box-shadow:0 12px 30px rgba(124,58,237,0.15);}
+.feature-card:nth-child(2){animation-delay:.05s}
+.feature-card:nth-child(3){animation-delay:.1s}
+.feature-card:nth-child(4){animation-delay:.15s}
+.feature-card:nth-child(5){animation-delay:.2s}
+.feature-card:nth-child(6){animation-delay:.25s}
+.feature-card:nth-child(7){animation-delay:.3s}
+.feature-card:nth-child(8){animation-delay:.35s}
+.feature-card:nth-child(9){animation-delay:.4s}
+.feature-card:nth-child(10){animation-delay:.45s}
+.feature-card:nth-child(11){animation-delay:.5s}
+.feature-card:nth-child(12){animation-delay:.55s}
+.feature-card:nth-child(13){animation-delay:.6s}
+.feature-card:nth-child(14){animation-delay:.65s}
+.feature-card:nth-child(15){animation-delay:.7s}
+.feature-card:nth-child(16){animation-delay:.75s}
+.feature-card:nth-child(17){animation-delay:.8s}
+.feat-icon{
+  width:44px;height:44px;min-width:44px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+}
+.feat-text h3{font-size:16px;font-weight:600;margin-bottom:4px;color:white;}
+.feat-text p{font-size:14px;color:#7fa8c8;line-height:1.5;}
+
+/* INCLUDES BANNER */
+.includes-banner{
+  margin:0 7% 30px;
+  background:linear-gradient(135deg,rgba(245,166,35,0.1),rgba(255,209,102,0.05));
+  border:1px solid rgba(245,166,35,0.2);
+  border-radius:14px;padding:28px 32px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.includes-banner i{font-size:28px;color:#f5a623;}
+.includes-banner h3{font-size:18px;color:#f5a623;margin-bottom:4px;}
+.includes-banner p{font-size:14px;color:#9a8060;}
+.includes-banner a{margin-left:auto;color:#f5a623;font-size:14px;text-decoration:none;border:1px solid #f5a623;padding:8px 18px;border-radius:8px;transition:.3s;white-space:nowrap;}
+.includes-banner a:hover{background:rgba(245,166,35,0.08);}
+.includes-banner2{
+  margin:0 7% 60px;
+  background:linear-gradient(135deg,rgba(0,119,255,0.1),rgba(0,183,255,0.05));
+  border:1px solid rgba(0,183,255,0.15);
+  border-radius:14px;padding:22px 32px;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.includes-banner2 i{font-size:22px;color:var(--sky);}
+.includes-banner2 p{font-size:14px;color:#7fa8c8;}
+.includes-banner2 a{color:var(--sky);text-decoration:none;font-size:14px;margin-left:auto;border:1px solid var(--sky);padding:6px 14px;border-radius:8px;transition:.3s;white-space:nowrap;}
+.includes-banner2 a:hover{background:rgba(0,183,255,0.08);}
+
+.cta-section{
+  padding:80px 7%;text-align:center;
+  background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(167,139,250,0.04));
+  border-top:1px solid rgba(124,58,237,0.15);
+  border-bottom:1px solid rgba(124,58,237,0.15);
+}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);margin-bottom:14px;color:white;}
+.cta-section p{color:#8b7ca8;font-size:17px;margin-bottom:36px;}
+.btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{
+  padding:16px 36px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:white;font-weight:700;font-size:15px;
+  border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;
+  transition:.4s;box-shadow:0 8px 24px rgba(124,58,237,0.3);
+}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(124,58,237,0.4);}
+.btn-outline{
+  padding:16px 36px;background:transparent;color:var(--accent2);font-weight:600;font-size:15px;
+  border:2px solid var(--accent2);border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;transition:.4s;
+}
+.btn-outline:hover{background:rgba(124,58,237,0.08);}
+
+.plans-nav{padding:70px 7%;text-align:center;}
+.plans-nav h3{font-family:'Playfair Display',serif;font-size:30px;color:white;margin-bottom:36px;}
+.plans-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+.plan-card{
+  background:var(--card);border:1px solid rgba(0,183,255,0.15);
+  border-radius:14px;padding:30px 28px;width:220px;text-align:left;
+  text-decoration:none;color:white;transition:.4s;
+}
+.plan-card:hover{border-color:var(--sky);transform:translateY(-6px);}
+.plan-card .icon{font-size:28px;margin-bottom:12px;}
+.plan-card h4{font-size:18px;font-weight:700;color:var(--sky);margin-bottom:6px;}
+.plan-card p{font-size:13px;color:#7fa8c8;}
+
+.footer-mini{
+  background:var(--dark);padding:24px 7%;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:12px;
+}
+.footer-mini p{color:#888;font-size:14px;}
+.footer-mini a{color:var(--sky);font-size:14px;text-decoration:none;}
+
+@media(max-width:768px){
+  .hero{padding:70px 5% 50px;}
+  .features-section,.cta-section,.plans-nav{padding-left:5%;padding-right:5%;}
+  .includes-banner,.includes-banner2{margin-left:5%;margin-right:5%;}
+  .includes-banner a,.includes-banner2 a{margin-left:0;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PROFILIX</a>
+  <a href="index.html" class="nav-back"><i class="fa fa-arrow-left"></i> Back to Home</a>
+</nav>
+
+<section class="hero">
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="crown-wrap"><span>💎</span></div>
+  <div class="plan-badge">Platinum Plan — Premium</div>
+  <h1>Ultimate Smart<br>Identity Solution</h1>
+  <h2>Full premium experience with complete access.</h2>
+</section>
+
+<div class="includes-banner">
+  <i class="fa fa-crown"></i>
+  <div>
+    <h3>Includes Everything in Gold Plan</h3>
+    <p>All Gold Plan features included — plus the full premium suite below.</p>
+  </div>
+  <a href="gold-plan.html">View Gold Plan →</a>
+</div>
+
+<div class="includes-banner2">
+  <i class="fa fa-robot"></i>
+  <div><p>Also includes all <strong>AI Plan</strong> features (Digital Profile, QR Code, AI Bio, Analytics & more)</p></div>
+  <a href="ai-plan.html">View AI Plan →</a>
+</div>
+
+<section class="features-section">
+  <p class="section-label">Exclusive Platinum Features</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:white;">The Complete Package</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-circle-check"></i></div>
+      <div class="feat-text"><h3>Everything in Gold Plan</h3><p>Inherit all Gold and baseline AI utilities out of the box.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-globe"></i></div>
+      <div class="feat-text"><h3>Custom Domain Support</h3><p>Your profile on your own custom domain name.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-gauge-high"></i></div>
+      <div class="feat-text"><h3>Full Dashboard Access</h3><p>Complete control panel for all your features.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-brain"></i></div>
+      <div class="feat-text"><h3>Premium AI Features</h3><p>Full suite of AI-powered tools and generators.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-wand-magic-sparkles"></i></div>
+      <div class="feat-text"><h3>AI Portfolio Design</h3><p>AI generates and arranges your portfolio automatically.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-pen-nib"></i></div>
+      <div class="feat-text"><h3>AI Content Suggestions</h3><p>Smart suggestions for your profile content and copy.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-layer-group"></i></div>
+      <div class="feat-text"><h3>Unlimited Profile Sections</h3><p>Add as many sections as your business needs.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-users"></i></div>
+      <div class="feat-text"><h3>Team / Staff Profiles</h3><p>Add your entire team under one business profile.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-fire"></i></div>
+      <div class="feat-text"><h3>Advanced Business Branding</h3><p>Full brand identity — colors, logos, and theme.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-paintbrush"></i></div>
+      <div class="feat-text"><h3>Premium Custom UI</h3><p>Fully customized user interface for your profile.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-funnel-dollar"></i></div>
+      <div class="feat-text"><h3>Lead Collection System</h3><p>Capture leads and inquiries directly from your profile.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-chart-pie"></i></div>
+      <div class="feat-text"><h3>Analytics Dashboard</h3><p>Full analytics — visitors, clicks, and engagement.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-sliders"></i></div>
+      <div class="feat-text"><h3>Full Customization</h3><p>Every detail of your profile fully customizable.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-headset"></i></div>
+      <div class="feat-text"><h3>Dedicated Support</h3><p>Your own dedicated support representative.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-medal"></i></div>
+      <div class="feat-text"><h3>Premium Physical Card</h3><p>High-end physical card with premium finish.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-wifi"></i></div>
+      <div class="feat-text"><h3>NFC Smart Card Support</h3><p>Tap-to-share NFC smart card technology.</p></div>
+    </div>
+    <div class="feature-card">
+      <div class="feat-icon"><i class="fa fa-plug"></i></div>
+      <div class="feat-text"><h3>Business Integration Features</h3><p>Connect your profile with business tools and systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA WITH UPDATED EMAIL & LINKEDIN LINKS -->
+<section class="cta-section">
+  <h2>Go Platinum — Get the Best</h2>
+  <p>The ultimate digital identity solution — no compromises, full power.</p>
+  <div class="btn-row">
+    <!-- Email Contact Button -->
+    <a href="mailto:profilix.services@gmail.com" class="btn-primary"><i class="fa fa-envelope" style="margin-right: 8px;"></i> Email Us Now</a>
+    <!-- LinkedIn Contact Button -->
+    <a href="https://linkedin.com/company/profilix" target="_blank" class="btn-outline"><i class="fab fa-linkedin" style="margin-right: 8px;"></i> Connect on LinkedIn</a>
+  </div>
+</section>
+
+<section class="plans-nav">
+  <h3>Compare Other Plans</h3>
+  <div class="plans-row">
+    <a href="ai-plan.html" class="plan-card">
+      <div class="icon">🤖</div>
+      <h4>AI Plan</h4>
+      <p>Smart Starter for Beginners</p>
+    </a>
+    <a href="gold-plan.html" class="plan-card">
+      <div class="icon">🥇</div>
+      <h4>Gold Plan</h4>
+      <p>Professional Business Identity</p>
+    </a>
+    <a href="smart-qr.html" class="plan-card">
+      <div class="icon">📇</div>
+      <h4>Smart QR Cards</h4>
+      <p>Physical NFC Smart Cards</p>
+    </a>
+  </div>
+</section>
+
+<div class="footer-mini">
+  <p>© 2026 PROFILIX DIGITAL SERVICES. All Rights Reserved.</p>
+  <a href="index.html">← Back to Main Site</a>
+</div>
+
+</body>
+</html>
